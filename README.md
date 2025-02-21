@@ -1,0 +1,1 @@
+This is a repo to store my personal nvim configuration. It's only intended for my personal use, but I made it public so that it's easier to pull onto other machines quickly. If you're just browsing my github, then feel free to pull my config and give it a try.
