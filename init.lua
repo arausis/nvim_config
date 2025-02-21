@@ -31,7 +31,6 @@ vim.wo.relativenumber = true
 vim.cmd[[let g:python3_host_prog = '/usr/bin/python3']]
  
 require('packerplug')
-
  
 vim.cmd[[autocmd FileType python map <buffer> <Leader>p :w<CR>:exec '!python3' shellescape(@%, 1)<CR>]]
 
@@ -45,3 +44,5 @@ vim.cmd[[inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline
 vim.cmd[[nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR> ]]
 
 vim.cmd[[nnoremap <C-s> :  ! for FILE in ./figures/*.svg; do inkscape -D $FILE  -o .pdf --export-latex; done <CR>]]
+
+vim.api.nvim_set_keymap('n', '<Leader>t', ':NvimTreeToggle<CR>', {noremap = true})
